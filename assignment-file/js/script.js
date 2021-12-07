@@ -6,9 +6,14 @@
 
 window.addEventListener('scroll', event =>{
     if(window.scrollY > 547) {
-        document.getElementById("navbar").classList.add('fixed-top', 'shadow-sm', 'sticky', 'opacity-75');
+        document.getElementById("navbar").classList.add('fixed-top', 'float-panel','shadow-sm', 'sticky', 'opacity-75');
+        // document.getElementById('navbar').style.transition = '0.7s';
+        // document.getElementById('navbar').style.animationDirection = 'normal';
+        document.getElementById('navbar').style.cssText = 'transition = 0.7s; animationDirection = normal;';
     } else {
         document.getElementById("navbar").classList.remove('fixed-top', 'shadow-sm', 'sticky', 'opacity-75');
+        document.getElementById('navbar').style.animationDuration = null;
+        document.getElementById('navbar').style.animationDirection = null;
     }
 });
 
@@ -18,13 +23,13 @@ window.addEventListener('scroll', event =>{
 
 // Define Play button variable
 
-const playBtn = document.getElementById('play-btn');
+    // const playBtn = document.getElementById('play-btn');
 
-// playBtn.addEventListener('click', finsetModal.show(){
-    
-// });
+    // playBtn.addEventListener('click', finsetModal.show(){
+        
+    // });
 
-// const finsetModal =
+    // const finsetModal =
 
 // Create a modal with a single line of JavaScript: https://getbootstrap.com/docs/5.1/components/modal/#via-javascript
 // Define finsetModal then use Bootstrap modal Object request
